@@ -1,0 +1,8 @@
+var a=process.argv[2];
+      var b=process.argv[3];
+      console.log('the subtraction :'+(a-b));
+      
+      output:
+      
+      C:\Desktop>node sub.js 3 2
+      the subtraction :1
