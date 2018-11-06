@@ -1,14 +1,7 @@
-var summation=0;  
+var total=0;  
   numbers =process.argv.slice(2);
   numbers.forEach(function (a) {
-     summation +=Number(a);
-     return summation;
+     total +=Number(a);
+     return total;
       });
-      console.log('addition is:'+summation);
-
-
-
- output :
-      ------------------------------------
-      C:\Desktop>node add.js 2 6
-      addition is:8
+      console.log('addition is:'+total);
