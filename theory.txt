@@ -1,0 +1,130 @@
+HTTP Methods:
+GET,POST,PUT,HEAD,DELETE,PATCH
+GET is used to request data from a specified resource.
+GET is one of the most common HTTP methods, most used.
+POST is used to send data to a server to create/update a resource , most used.
+PUT is used to send data to a server to create/update a resource.
+difference between put and post:---
+PUT requests are idempotent.Calling the same PUT request multiple times will always gives the same result. 
+In contrast, calling a POST request repeatedly have side effects of creating the same resource multiple times.
+The DELETE method deletes the specified resource.
+PATCH : When we're doing a partial update, can use HTTP PATCH.
+--------------------------------------------------------------------------------------------------------------------------------
+HTTP RESPONSE CODES:there are five types of response codes
+1xx: Informational
+It means that request was received and the process is continuing.
+2xx: Success
+It means that action was successfully received, understood, and accepted.
+3xx: Redirection
+It says that further action must be taken in order to complete the request.
+4xx: Client Error
+It means the request contains incorrect syntax or cannot be fulfilled.
+5xx: Server Error: the server failed to fulfill an apparently valid request.
+------------------------------------------------------------------------------------------------------------------------------------
+
+CONTENT DELIVERY NETWORKS:
+a system of computers (computing devices)
+networked together (across the Internet)to deliver content to end users, in order to improve performance, scalability, and cost
+efficiency.
+Advantages:why we need CDN ?
+Reduce (backbone) bandwidth costs
+Improve end user performance
+Shorter latency / response quickly, Less delay jitter
+Higher bandwidth
+Increase global availability of content
+-----------------------------------------------------------------------------------------------------------------------------------
+MEAN Stack:
+MEAN is actually combination of 3 JavaScript frameworks and a NoSQL.
+M is for MongoDB:data in MongoDB JSON-like documents with dynamic schemas.
+E is for ExpressJS: combined with nodes.js
+A is for AngularJS: AngularJS is a structural framework for dynamic web apps.
+N is for NodeJS: Node.js is an open-source, cross-platform runtime environment for developing server-side web applications.
+Node.js applications are written in JavaScript and can be run within the Node.js runtime on OS X, 
+MEAN stack refers to a collection of JavaScript based technologies used to develop web applications. 
+MEAN is an acronym for MongoDB, ExpressJS, AngularJS and Node.js.
+Starting From client to server to database, MEAN is full stack JavaScript.
+--------------------------------------------------------------------------------------------------------------------------------------
+Single and multithread:
+That means that a thread is a simple flow of instruction. 
+An application can be single threaded (it as a single line going from the entry point of the application to its end) 
+or multi-threaded (the whole app starts from 1 point, than it branches out more and more).
+ multi-threaded applications can do a lot more things than single threaded ones and they do them faster.
+-------------------------------------------------------------------------------------------------------------------------------
+Idempotence:
+
+For an operation (or service call) to be idempotent, clients can make that same call repeatedly while producing the same result. In other words, making multiple identical requests has the same effect as making a single request. 
+Note that while idempotent operations produce the same result on the server (no side effects), the response itself may not be the same (e.g. a resource's state may change between requests).
+The PUT and DELETE methods are defined to be idempotent. 
+      The problem with DELETE, which if successful would normally return a 200 or 204 (No Content)or 404 (Not Found) on subsequent calls, unless the service is configured to "mark" resources for deletion without actually deleting them. However, when the service actually deletes the resource, the next call will not find the resource to delete it and return a 404. However, the state on the server is the same after each DELETE call, but the response is different.
+GET, HEAD, OPTIONS and TRACE methods are defined as safe, meaning they are only intended for retrieving data. This makes them idempotent as well since multiple, identical requests will behave the same.
+where as POST is not safe.
+PUT requests are idempotent.Calling the same PUT request multiple times will always gives the same result. 
+In contrast, calling a POST request repeatedly have side effects of creating the same resource multiple times.
+
+------------------------------------------------------------------------------------------------------------------------------
+Why Node.js?
+Node.js is a server-side platform built on Google Chrome's JavaScript Engine (V8 Engine). 
+Node.js applications are written in JavaScript, and can be run with in the Node.js runtime on OS X, Microsoft Windows, and Linux.
+****Asynchronous and Event Driven,Fast,Single Threaded but Highly Scalable, no buffering etc are advantages of node.js.
+
+-----------------------------------------------------------------------------------------------------------------------------
+Synchronous vs asynchronous languages:
+Synchronous languages:
+Your program starts at the first line of source code and each line of code executed sequentially thereafter in Synchronous languages.
+Your program is executed line by line, one line at a time. 
+Each time a function is called, program execution waits until that function returns before continuing to the next line of code.
+ex: javascript
+
+Asynchronous languages:
+Asynchronous execution avoids this bottleneck problems. 
+You are essentially saying, “I know this function call is going to take a great deal of time, but my program doesn’t want to wait around while it executes.”
+ex:flex, node.js
+
+-------------------------------------------------------------------------------------------------------------------------------
+Multiprogramming – A computer running more than one program at a time (like running Excel and Firefox simultaneously).
+Multitasking – Tasks sharing a common resource (like using 1 CPU).
+
+Multithreading is an extension of multitasking.A thread is a basic unit of CPU utilization
+ex:VLC media player, where one thread is used for opening the VLC media player, one thread for playing a particular song and another thread for adding new songs to the playlist.
+
+Multiprocessing ::=  use of two or more CPUs (processors) within a single Computer system. 
+This term also refers to the ability of a system to support more than one processor within a single computer system.
+ex: dual core,multicore processors...
+
+----------------------------------------------------------------------------------------------------------------------------------
+v8 engine:
+V8 is a powerful open source Javascript engine provided by Google. what is Javascript Engine? 
+It is a program that converts Javascript code into  machine code.
+ex: JavaScript engines are Rhino, JavaScriptCore, and SpiderMonkey.
+v8 engine is written in C++ and used in Chrome and Nodejs.
+It implements ECMAScript as specified in ECMA-262.
+The V8 engine can run standalone we can embed it with our own C++ program.
+V8 can run standalone and  we can add our own function implementation in C++ to add new features to JavaScript.
+----------------------------------------------------------------------------------------------------------------------------------
+libuv:
+libuv is a multi-platform support library with a focus on asynchronous I/O.
+Features
+Full-featured event loop backed by epoll, kqueue, IOCP, event ports.
+Asynchronous TCP and UDP sockets
+Asynchronous DNS resolution
+Asynchronous file and file system operations
+File system events
+Thread pool
+Signal handling
+--------------------------------------------------------------------------------------------------------------------------
+event loop:
+In an event-driven application, there is generally a main loop that listens for events, 
+and then triggers a callback function when one of those events is detected.
+Node.js is a single-threaded application, still it can supports concurrency via the concept of event and callbacks.
+Node thread keeps an event loop and whenever a task gets completed,
+it fires the corresponding event which signals the event-listener function to execute.
+--------------------------------------------------------------------------------------------------------------------------------
+Non-blobcking io:
+Non-blocking IO means an IO request is queued straight away and the function returns. 
+The actual IO is then processed later.
+Parallel programming, difficult to code, more control needed
+Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine.
+Node.js uses an event-driven, non-blocking I/O model
+
+--------------------------------------------------------------------------------------------------------------------------
+
